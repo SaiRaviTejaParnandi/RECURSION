@@ -1,0 +1,31 @@
+
+
+#include <iostream>
+
+using namespace std;
+int sum(int n)
+{
+    if (n==0)
+    {
+        return 0;
+    }
+    else
+    {
+        /* logic is sum of 5 natural numbers can be written as: sum=1+2+3+4+5 .
+                                                                sum= sum(4)+5
+                                             for 'n'  numbers sum= sum(n-1)+n */
+                                             
+        return sum(n-1)+n; 
+    }
+}
+
+int main()
+{
+    int n,x;
+    cout<<"welcome to sum of n natural numbers using recursion"<<endl;
+    cout<<"enter the number upto which you want to find the sum"<<endl;
+    cin>>n;
+    x=sum(n);
+    cout<<"the sum of "<< n << "natural numbers is "<<x;
+    return 0;
+}
