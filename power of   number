@@ -1,0 +1,30 @@
+
+
+#include <iostream>
+
+using namespace std;
+int power(int n,int m)
+{
+    if (n==0)
+    {
+        return 1;
+    }
+    else
+    {
+                                             
+        return power(n-1,m)* m; 
+    }
+}
+
+int main()
+{
+    int n,x,m;
+    cout<<"welcome to find the power of a number using recursion"<<endl;
+    cout<<"enter the base"<<endl;
+    cin>>m;
+    cout<<"enter the exponent"<<endl;
+    cin>>n;
+    x=power(n,m);
+    cout<<"the"<< m << "power of "<< n << "="<< x;
+    return 0;
+}
