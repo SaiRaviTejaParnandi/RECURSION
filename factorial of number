@@ -1,0 +1,31 @@
+
+
+#include <iostream>
+
+using namespace std;
+int fact(int n)
+{
+    if (n==0)
+    {
+        return 1;
+    }
+    else
+    {
+        /* logic is factoral of number can be written as: fact(n)= n*n-1*n-1*....1*0
+                                                                fact(n)=fact(n-1)*n
+                                              */
+                                             
+        return fact(n-1)*n; 
+    }
+}
+
+int main()
+{
+    int n,x;
+    cout<<"welcome to find the factorial of a number using recursion"<<endl;
+    cout<<"enter the number "<<endl;
+    cin>>n;
+    x=fact(n);
+    cout<<"the factorial of "<< n << "="<<x;
+    return 0;
+}
