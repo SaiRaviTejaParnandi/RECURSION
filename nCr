@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int c(int n,int r)
+{
+    if(n==r || r==0)
+    {
+        return 1;
+    }
+    else
+    {
+        return c(n-1,r)+c(n-1,r-1);
+    }
+}
+int main()
+{
+    int n,r,res;
+    cout<<"welcme to nCr using recursion"<<endl;
+    cout<<"enter n"<<endl;
+    cin>>n;
+    cout<<"enter r"<<endl;
+    cin>>r;
+    res=c(n,r);
+    cout<<"the answer is"<<res<<endl;
+    return 0;
+}
