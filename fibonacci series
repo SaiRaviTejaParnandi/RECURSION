@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+int fib(int a)
+{
+    if (a<=1)
+    {
+        return a;
+    }
+    return fib(a-1)+fib(a-2);
+}
+int main()
+{    
+    int res=0,n;
+    cout<<"welcome to fibonacci series"<<endl;
+    cout<<"enter the number you want in fib series"<<endl;
+    cin>>n;
+    res=fib(n);
+    cout<<"the "<<n<<" in fib series is "<<res<<endl;
+    
+
+    return 0;
+}
